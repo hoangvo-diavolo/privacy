@@ -1,0 +1,753 @@
+/*
+Theme Name: SkyPhone WebSite Theme
+Author: QuadSystem
+Author URI: http://www.quadsystem.co.jp/
+Description: SkyPhone ホームページ テンプレート
+*/
+
+/*------------------------------------------------------------
+	リセット
+------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, figure { margin: 0; padding: 0; background: transparent; border: 0; outline: 0; font-size: 1em;}
+
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; } ol, ul { list-style: none; } blockquote, q { quotes: none; } :focus { outline: 0; } ins { text-decoration: none; } del { text-decoration: line-through; }
+object,embed { display: block; border: none; }
+
+/*------------------------------------------------------------
+	クリアフィクス
+------------------------------------------------------------*/
+.clearfix:before,
+.clearfix:after,
+#container:before,
+#container:after,
+#header:before,
+#header:after,
+#contents:before,
+#contents:after,
+#footer:before,
+#footer:after,
+.entry-content:before,
+.entry-content:after {
+	display: table;
+	line-height: 0;
+	content: "";
+}
+
+.clearfix:after,
+#container:after,
+#header:after,
+#contents:after,
+#footer:after,
+.entry-content:after {
+	clear: both;
+}
+
+.clear {
+	clear:both;
+}
+/*------------------------------------------------------------
+	リンク
+------------------------------------------------------------*/
+a {
+	text-decoration: none;
+	font-size:100%;
+	color: #0071BC;
+}
+a:hover {
+	text-decoration: underline;
+	color: #0071BC;
+}
+a img {
+	border-style: none;
+}
+
+
+
+/*------------------------------------------------------------
+	フォント
+------------------------------------------------------------*/
+body { -webkit-text-size-adjust: 100%; } /*スマホ表示時の文字サイズ拡大を防ぐ*/
+
+body, table, input, textarea, select, option {
+	font-family: " Lucida Grande ", " Lucida Sans Unicode ", Helvetica,"Hiragino Kaku Gothic ProN", "メイリオ", sans-serif;
+	font-size: 0.9em;
+}
+
+small {
+	font-size: 80%;
+}
+
+hr {
+	clear: both;
+}
+
+/*------------------------------------------------------------
+	レイアウト
+------------------------------------------------------------*/
+body {
+	background-color:#FFFFFF;
+}
+#container {
+	overflow: hidden;
+}
+.wrap {
+	width:960px;
+	margin:0 auto;
+}
+#header {
+	margin:0;
+	background-color: #227cbf;
+	padding: 20px 0;
+	position: relative;
+}
+#nav {
+	margin:0 0 0px 0;
+}
+#contents {
+	margin:0 0 0px 0;
+	padding: 30px 0;
+}
+
+#footer {
+	background-color:#1a2332;
+	padding:20px;
+}
+
+/*------------------------------------------------------------
+	header
+------------------------------------------------------------*/
+#header .wrap {
+	width: 96%;
+}
+
+#header h1#h-logo {
+	width:212px;
+	height:42px;
+	float: left;
+}
+
+#h-nav {
+	text-align: right;
+	padding-right: 30px;
+}
+#h-nav li {
+	display: inline-block;
+	width: 80px;
+	text-align: center;
+	vertical-align: top;
+}
+#h-nav li img,
+#h-nav li svg {
+	width: 40px;
+	height: 40px;
+}
+#h-nav li p {
+	font-size: 10px;
+	color: #FFFFFF;
+}
+#h-nav li a {
+	color: #FFFFFF;
+}
+.navSvg {
+	fill:#FFFFFF;
+}
+
+
+.search-form {
+	width:200px;
+	position:absolute;
+	top:10px;
+	right:20px;
+}
+/* Reset input[type="search"] */
+input[type="search"] {
+	box-sizing: content-box;
+	-webkit-appearance: none;
+	border-radius:20px 0 0 20px;
+	-webkit-border-radius:20px 0 0 20px;
+	-moz-border-radius:20px 0 0 20px;
+	-webkit-tap-highlight-color : rgba(0,0,0,0);
+}
+input[type="search"]:focus {
+	outline-offset: -2px;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration  {
+	-webkit-appearance: none;
+}
+
+.search-form #s {
+	float:left;
+	border: none;
+    font-size: 14px;
+    font-weight: normal;
+    height: 20px;
+    outline: none;
+    padding: 10px;
+    display: block;
+    width: 140px;
+    margin: 0;
+}
+.search-form .search-submit {
+    display: block;
+    float: right;
+    width: 40px;
+    margin-right: -0px;
+    background: url(images/icon_search.png) no-repeat 0 top;
+	background-color:#fff;
+    text-indent: 40px;
+    overflow: hidden;
+    border-radius: 0;
+    border: none;
+	border-radius:0 20px 20px 0;
+	-webkit-border-radius:0 20px 20px 0;
+	-moz-border-radius:0 20px 20px 0;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    padding: 0;
+}
+
+
+/*------------------------------------------------------------
+	footer
+------------------------------------------------------------*/
+
+#footer .f-nav {
+	text-align:center;
+	margin:0 0 20px 0;
+}
+#footer .f-nav ul {
+	margin-bottom: 5px;
+}
+#footer .f-nav ul li {
+	display:inline;
+	text-align:center;
+	color:#999999;
+	font-size:0.8em;
+}
+#footer .f-nav ul li.separator:after {
+	content: '｜';
+}
+
+#footer .f-nav ul li a {
+	color:#999999;
+}
+#footer .f-nav ul li a:hover {
+	color:#ffffff;
+}
+#footer .copyright {
+	font-size:0.8em;
+	text-align:center;color: #666666;
+}
+#footer .f-sns ul {
+	float: right;
+	margin-bottom: 10px;
+}
+#footer .f-sns li {
+	display: inline-block;
+	margin: 0 5px;
+}
+#footer .f-sns li a {
+	display:block;
+	width: 20px;
+	height: 20px;
+	text-indent: -9999px;
+	background-image: url(images/sprite_sns.png);
+	background-repeat:no-repeat;
+
+}
+#footer .f-sns li.in a {
+	background-position: 0 0;
+}
+#footer .f-sns li.fb a {
+	background-position: -20px 0;
+}
+#footer .f-sns li.tw a {
+	background-position: -40px 0;
+}
+#footer .f-lang {
+	font-size: 0.9em;
+	color: #FFFFFF;
+}
+#footer .f-lang a {
+	color: #FFFFFF;
+}
+
+/* JASRACロゴ 20181024追加 */
+#footer .f-box001 {
+	display: flex;
+	margin-bottom: 1rem;
+	justify-content: space-between;
+	align-items: center;
+}
+#footer .f-jaslogo {
+	color:#999999;
+	background: url(images/jasrac.png) no-repeat right center;
+	padding-right: 28px;
+	text-align: right;
+	font-size:0.8em;
+	min-height: 22px;
+	/*line-height: 22px;*/
+	padding-top: 1.15em;
+	line-height: 1;
+}
+
+
+/*------------------------------------------------------------
+	.f-inquiry-block
+------------------------------------------------------------*/
+#icon_tel {
+	margin-bottom: 10px;
+}
+
+.f-inquiry-block {
+	background-color: #0084C9;
+	padding: 40px 0;
+
+}
+.f-inquiry-block p.txt {
+	color: #FFFFFF;
+	font-size: 1.4em;
+	margin-bottom: 30px;
+	text-align: center;
+}
+/*.f-inquiry-block a.formbtn {
+	display: inline-block;
+	background-color: #FFFFFF;
+	padding: 10px 30px;
+	font-size: 1.4em;
+	color: #333333;
+	text-decoration: none;
+	border-radius:10px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+}
+.f-inquiry-block a:hover {
+	background-color: #D8F0FF;
+	color: #0084C9;
+}*/
+
+
+.f-inquiry-block h3 {
+	display: inline-block;
+	width: 200px;
+	background-color: #FFFFFF;
+	color: #0084c9;
+	border-radius:20px;
+	-webkit-border-radius:20px;
+	-moz-border-radius:20px;
+	padding: 10px;
+	text-align: center;
+}
+
+.userSupportBlock {
+	float: right;
+	width: 650px;
+
+}
+.userSupportBlock p {
+	color: #FFFFFF;
+	margin-bottom: 10px;
+}
+.userSupportBlock .kome {
+	font-size: 0.8em;
+}
+.userSupportBlock .time {
+	font-size: 0.9em;
+	color: #d8f0ff;
+	margin-bottom: 20px;
+}
+.userSupportBlock .telNumber {
+	font-size: 2em;
+}
+.userSupportBlock a.mailform {
+	color: #FFFFFF;
+	text-decoration: underline;
+	font-size: 1.4em;
+}
+.userSupportBlock a.mailform:hover {
+	color: #d8f0ff;
+}
+.userSupportBlock svg {
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+
+
+/*------------------------------------------------------------
+	pagetop
+------------------------------------------------------------*/
+#pagetop {
+	width:50px;
+	height:50px;
+	position:fixed;
+	bottom:20px;
+	right:20px;
+}
+#pagetop p a {
+	display:block;
+	background-color:#999999;
+	color:#FFFFFF;
+	padding:10px;
+	text-align:center;
+	border-radius:4px;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+}
+#pagetop p a:hover {
+	text-decoration:none;
+	background-color:#CCCCCC;
+}
+
+
+.more-link {
+	text-align:right;
+	font-size: 0.9em;
+	margin-top: 10px;
+}
+.more-link a {
+	background-image:url(images/icon_more.png);
+	background-position: right center;
+	background-repeat: no-repeat;
+	padding-right:20px;
+}
+
+
+.back-link {
+	font-size: 1em;
+	position: relative;
+	padding-left: 35px;
+}
+.back-link a:before {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	content: url(images/icon_back.png);
+	margin-top: -14px;
+	width: 35px;
+}
+
+
+/*------------------------------------------------------------
+	common
+------------------------------------------------------------*/
+.aligncenter {
+	text-align:center;
+}
+.alignleft {
+	float:left;
+}
+.alignright {
+	float:right;
+}
+
+.leftarea {
+	float:left;
+}
+.rightarea {
+	float:right;
+}
+
+.img-h > * {
+	display: inline-block;
+	vertical-align: text-top;
+	margin: 5px 20px 10px 0;
+}
+
+
+
+
+/*------------------------------------------------------------
+	contents
+------------------------------------------------------------*/
+#pagetitle {
+	font-size: 2em;
+	margin:0 0 30px 0;
+	color: #0071BC;
+	border-bottom: 1px solid #004080;
+	padding: 0 0 10px 0;
+}
+
+.entry-title {
+	font-size: 1.6em;
+	font-weight: normal;
+	border-bottom: 1px solid #004080;
+	padding: 0 0 5px 0;
+	margin:0 0 30px 0;
+}
+
+.entry-content {
+	margin: 0 0 30px 0;
+	font-size: 1em;
+	line-height: 1.6;
+	color: #333333;
+}
+
+.entry-content p,
+.entry-content ul,
+.entry-content ol {
+	margin-bottom: 1em;
+}
+
+.entry-content ul {
+	list-style: disc;
+	margin-left: 30px;
+}
+.entry-content ol {
+	list-style:decimal;
+	margin-left: 30px;
+}
+
+.entry-content .kome {
+	color: #666666;
+	font-size: 0.85em;
+}
+
+.entry-content a.link:before {
+	content: '';
+	display: inline-block;
+	width: 14px;
+	height: 10px;
+	background-image: url(images/arrow_link.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+
+/*------------------------------------------------------------
+	Search
+------------------------------------------------------------*/
+.search_txt {
+	margin-bottom: 20px;
+}
+
+.search_results_section {
+	margin-bottom: 20px;
+}
+.search_results_section .article {
+	margin-bottom: 20px;
+	padding: 10px;
+	border-bottom: 1px dashed #CCCCCC;
+}
+.search_results_section .article h2.entry-title {
+	font-size: 1.2em;
+	border:none;
+	padding-bottom: 0;
+	margin-bottom: 10px;
+}
+
+/*------------------------------------------------------------
+	page Navi
+------------------------------------------------------------*/
+
+.wp-pagenavi {
+	clear: both;
+	text-align:left;
+	font-size:80%;
+}
+
+.wp-pagenavi span{
+	text-decoration: none;
+	padding: 3px 5px;
+	margin: 2px;
+	color:#666;
+}
+.wp-pagenavi a {
+	text-decoration: none;
+	border: 1px solid #DDDDDD;
+	padding: 3px 5px;
+	margin: 2px;
+	border-radius:10px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+}
+
+.wp-pagenavi a:hover {
+	border: 1px solid #c1ebfc;
+	background-color:#c1ebfc;
+}
+
+.wp-pagenavi span.current {
+	background-color:#DDDDDD;
+	border:none;
+	border-radius:10px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+}
+
+/*------------------------------------------------------------
+	Terms
+------------------------------------------------------------*/
+#termsContent {
+}
+#termsContent h4 {
+	font-size: 1em;
+	line-height: 1.4;
+	margin-bottom: 20px;
+}
+#termsContent ol,
+#termsContent ul,
+#termsContent p {
+	margin-bottom: 20px;
+	font-size: 0.9em;
+	line-height: 1.8;
+}
+#termsContent ol,
+#termsContent ul {
+	margin-left: 30px;
+}
+#termsContent ol {
+	list-style: decimal;
+}
+#termsContent li {
+	line-height: 1.4;
+	margin-bottom: 5px;
+}
+
+
+/*------------------------------------------------------------
+	maintenance
+------------------------------------------------------------*/
+
+#maintenance {
+	margin-bottom: 20px;
+
+}
+#mainteBody {
+	border: 1px solid #C1272D;
+	padding: 10px;
+	font-size: 0.9em;
+	color: #C1272D;
+}
+
+#maintenance p {
+	margin-bottom: 1em;
+}
+#maintenance p:last-child {
+	margin-bottom: 0;
+}
+
+
+
+
+/*------------------------------------------------------------
+	holiday
+------------------------------------------------------------*/
+#holiday {}
+
+#holiday div.entry-content {
+	margin-bottom: 30px;
+	border: 1px solid #227cbf;
+	padding: 20px;
+	font-size: 0.9em;
+}
+#holiday div.entry-content p {
+	margin-bottom: 1em;
+}
+#holiday div.entry-content p:last-child {
+	margin-bottom: 0;
+}
+
+
+/*------------------------------------------------------------
+	responsive
+------------------------------------------------------------*/
+
+@media (max-width: 959px) {
+	.wrap {
+		width:94%;
+		margin:0 3%;
+	}
+
+	.f-inquiry-block h3 {
+		display:block;
+		width: 200px;
+			margin-bottom: 20px;
+	}
+
+	.userSupportBlock {
+		float: none;
+		width: 100%;
+	}
+	.userSupportBlock .kome {
+		display: block;
+	}
+
+
+}
+@media (max-width: 799px) {
+
+}
+
+
+
+@media (min-width: 767px) {
+
+}
+@media (min-width: 768px) and (max-width: 979px) {
+
+}
+@media (max-width: 767px) {
+
+}
+
+@media (max-width: 480px) {
+	img.full-img {
+		width:100%;
+		height:auto;
+	}
+	#header {
+		padding: 10px 0;
+	}
+	#header h1#h-logo {
+		width:130px;
+		height:26px;
+		float:none;
+	}
+
+	#h-nav {
+		text-align: center;
+		padding-right: 0px;
+		margin-top: 10px;
+	}
+	#h-nav li {
+		display: inline-block;
+		width: 24%;
+		text-align: center;
+		vertical-align: top;
+	}
+	#h-nav li img,
+	#h-nav li svg {
+		width: 30px;
+		height: 30px;
+	}
+	.f-inquiry-block {
+		padding: 30px 0;
+	}
+
+	/* JASRACロゴ 20181024追加 */
+	#footer .f-lang {
+		text-align: center;
+	}
+	#footer .f-box001 {
+		display: block;
+		margin-bottom: .5rem;
+	}
+	#footer .f-jaslogo {
+		margin-bottom: .5rem;
+		background: url(images/jasrac.png) no-repeat left center;
+		padding-left: 28px;
+		text-align: left;
+	}
+
+}
+
+@media (max-width: 400px) {
+
+}
